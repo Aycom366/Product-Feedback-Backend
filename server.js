@@ -8,6 +8,7 @@ const app = express();
 const connectDb = require("./db/connectDb");
 
 //third library imports
+const mongoSanitize = require("express-mongo-sanitize");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
@@ -29,6 +30,7 @@ app.use(helmet());
 app.use(cors());
 app.use(fileUpload());
 app.use(morgan("dev"));
+app.use(mongoSanitize());
 app.use(cookieParser(process.env.JWT_SECRET));
 
 //routes
