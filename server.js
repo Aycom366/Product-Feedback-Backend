@@ -34,6 +34,9 @@ app.use(mongoSanitize());
 app.use(cookieParser(process.env.JWT_SECRET));
 
 //routes
+app.use("/", (req, res) => {
+  res.json({ msg: "hello world" });
+});
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/feedback", feedbackRoute);
@@ -44,7 +47,7 @@ app.use(errorHandlerMiddleware);
 const start = async () => {
   try {
     await connectDb(process.env.MONGO_URL);
-    const port = process.env.PORT || 5000;
+    const port = process.env.PORT || 8080;
     app.listen(port, () => console.log(`server started on port ${port}`));
   } catch (error) {
     console.log(error);

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Upvote = require("./UpVote");
 
 const FeedbackSchema = mongoose.Schema(
   {

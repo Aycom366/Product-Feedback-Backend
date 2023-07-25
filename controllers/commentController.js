@@ -1,6 +1,5 @@
 const CustomError = require("../errors");
 const { StatusCodes } = require("http-status-codes");
-const User = require("../models/User");
 const Feedback = require("../models/Feedback");
 const Comment = require("../models/Comment");
 const { checkPermission } = require("../utils");

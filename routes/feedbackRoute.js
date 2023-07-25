@@ -9,12 +9,6 @@ const {
   GetAllFeedbacks,
   GetSingleFeedback,
   DeleteFeedback,
-  // UpdateCommentFeedback,
-  // DeleteCommentFeedback,
-  // DeleteSubcomment,
-  // CommentFeedback,
-  // AddSubComment,
-  // EditSubComment,
 } = require("../controllers/feedbackController");
 
 const {
