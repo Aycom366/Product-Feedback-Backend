@@ -34,9 +34,7 @@ app.use(mongoSanitize());
 app.use(cookieParser(process.env.JWT_SECRET));
 
 //routes
-app.use("/", (req, res) => {
-  res.json({ msg: "hello world" });
-});
+
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/feedback", feedbackRoute);
